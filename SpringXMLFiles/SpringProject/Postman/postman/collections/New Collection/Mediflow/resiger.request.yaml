@@ -1,0 +1,20 @@
+$kind: http-request
+name: resiger
+url: http://localhost:8081/api/auth/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\" : \"Pushpaa\",\r
+
+    \    \"email\": \"pushpaa@gmail.com\",\r
+
+    \    \"phone\" : \"9876543211\",\r
+
+    \    \"password\" : \"qwert1234\",\r
+
+    \    \"roles\" : \"STUDENT\"\r
+
+    }"
+order: 1788245179736

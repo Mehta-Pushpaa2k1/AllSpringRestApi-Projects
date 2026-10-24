@@ -1,0 +1,20 @@
+$kind: http-request
+name: New Request
+url: http://localhost:8081/api/auth/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\" : \"Puspa\",\r
+
+    \    \"email\": \"puspa@gmail.com\",\r
+
+    \    \"phone\" : \"987654351\",\r
+
+    \    \"password\" : \"123466\",\r
+
+    \    \"roles\" : \"STUDENT\"\r
+
+    }"
+order: 1788246792009

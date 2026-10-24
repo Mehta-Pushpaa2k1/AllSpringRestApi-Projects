@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Principal Bean -->
+    <bean id="principal" class="com.jsp.assignment7.Model.Principal">
+        <property name="name" value="Dr. Sharma"/>
+    </bean>
+
+    <!-- Student Beans -->
+    <bean id="stud1" class="com.jsp.assignment7.Model.Student">
+        <property name="studentName" value="Pushpa Mehta"/>
+        <property name="id" value="1"/>
+    </bean>
+
+    <bean id="stud2" class="com.jsp.assignment7.Model.Student">
+        <property name="studentName" value="Poonam"/>
+        <property name="id" value="2"/>
+    </bean>
+
+    <!-- College Bean with Dependency Injection -->
+    <bean id="college" class="com.jsp.assignment7.Model.College">
+        <property name="collegeName" value="GB Pant Government Engineering College"/>
+        <property name="principal" ref="principal"/>
+        <property name="students">
+            <list>
+                <ref bean="stud1"/>
+                <ref bean="stud2"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

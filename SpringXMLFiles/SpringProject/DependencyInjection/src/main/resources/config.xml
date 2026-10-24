@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.jsp.Model.Student" >
+        <property name="roll" value="8888" />
+        <property name="name" value="Pushpa Mehta" />
+        <property name="cgpa" value="86.2" />
+        <property name="phno" value="9355668666"/>
+    </bean>
+
+    <bean id="address" class="com.jsp.Model.Address">
+        <property name="hno" value="8186"/>
+        <property name="street" value="mahipalpur"/>
+        <property name="pincode" value="110037"/>
+
+    </bean>
+    <bean id="person" class="com.jsp.Model.Person">
+        <property name="address" ref="address"></property>
+    </bean>
+
+    <bean id="employee" class="com.jsp.Model.Employee">
+        <constructor-arg value="Poonam"/>
+        <constructor-arg value="Delhi"/>
+        <constructor-arg value="25000"/>
+    </bean>
+
+    <bean id="Colln" class="com.jsp.Model.Colln">
+        <property name="li">
+            <list>
+                <value>10</value>
+                <value>20</value>
+                <value>30</value>
+                <value>40</value>
+                <value>50</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>15</value>
+                <value>88</value>
+                <value>17</value>
+                <value>26</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="Pushpa"></entry>
+                <entry key="2" value="Poonam"></entry>
+                <entry key="3" value="Parul"></entry>
+            </map>
+        </property>
+
+    </bean>
+
+
+
+
+
+    <!-- 3rd -->
+    <bean id="account" class="com.jsp.Model.Account">
+        <property name="accountNumber" value="88268875966"/>
+        <property name="accountHolderName" value="Pushpa"/>
+        <property name="balance" value="50000"/>
+    </bean>
+    <bean id="bank" class="com.jsp.Model.Bank">
+        <property name="bankName" value="SBI"/>
+        <property name="account" ref="account"/>
+
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

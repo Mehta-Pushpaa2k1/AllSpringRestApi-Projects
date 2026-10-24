@@ -1,0 +1,14 @@
+$kind: http-request
+name: login
+url: http://localhost:8081/api/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\" : \"pushpaa@gmail.com\",\r
+
+    \    \"password\" : \"qwert1234\"\r
+
+    }"
+order: 2863925776556463

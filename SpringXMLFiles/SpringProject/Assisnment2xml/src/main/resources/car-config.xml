@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Engine Beans -->
+    <bean id="petrolEngine" class="com.jsp.assignment8.Model.PetrolEngine"/>
+    <bean id="dieselEngine" class="com.jsp.assignment8.Model.DieselEngine"/>
+
+    <!-- Configure Car Bean -->
+    <bean id="car" class="com.jsp.assignment8.Model.Car">
+        <property name="engine" ref="petrolEngine"/>
+    </bean>
+
+</beans>

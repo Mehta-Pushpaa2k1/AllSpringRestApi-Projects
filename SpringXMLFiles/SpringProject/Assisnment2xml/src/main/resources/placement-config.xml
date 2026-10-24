@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Notification Beans -->
+    <bean id="emailNotification" class="com.jsp.assignment10.Model.EmailNotification"/>
+    <bean id="smsNotification" class="com.jsp.assignment10.Model.SMSNotification"/>
+
+    <!-- Multiple Students -->
+    <bean id="student1" class="com.jsp.assignment10.Model.Student">
+        <property name="studentId" value="S101"/>
+        <property name="name" value="Rahul Sharma"/>
+    </bean>
+    <bean id="student2" class="com.jsp.assignment10.Model.Student">
+        <property name="studentId" value="S102"/>
+        <property name="name" value="Priya Verma"/>
+    </bean>
+
+    <!-- Multiple Companies -->
+    <bean id="company1" class="com.jsp.assignment10.Model.Company">
+        <property name="companyId" value="C101"/>
+        <property name="name" value="Google"/>
+    </bean>
+    <bean id="company2" class="com.jsp.assignment10.Model.Company">
+        <property name="companyId" value="C102"/>
+        <property name="name" value="Microsoft"/>
+    </bean>
+
+    <!-- Job Requirements -->
+    <bean id="job1" class="com.jsp.assignment10.Model.JobRequirement">
+        <property name="jobId" value="J101"/>
+        <property name="company" ref="company1"/>
+        <property name="role" value="Software Engineer"/>
+    </bean>
+
+    <!-- Application Bean -->
+    <bean id="application1" class="com.jsp.assignment10.Model.Application">
+        <property name="appId" value="A101"/>
+    </bean>
+
+    <!-- Placement Service (Notification Injected via XML) -->
+    <bean id="placementService" class="com.jsp.assignment10.Model.PlacementService">
+        <!-- Change ref to 'smsNotification' below to switch notification style without changing Java code! -->
+        <property name="notificationService" ref="emailNotification"/>
+    </bean>
+
+</beans>

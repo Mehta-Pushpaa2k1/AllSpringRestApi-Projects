@@ -1,0 +1,12 @@
+$kind: http-request
+name: New Request
+url: http://localhost:8081/api/student/mee
+method: DELETE
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{supabase_service_role_api_key_0ad4}}"
+order: 4258407001411833

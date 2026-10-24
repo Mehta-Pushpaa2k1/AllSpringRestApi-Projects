@@ -1,0 +1,19 @@
+$kind: http-request
+name: https://localhost:8080/employee/save
+description: ""
+url: http://localhost:8080/employee/save
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Pushp\",\r
+
+    \    \"salary\": 50000,\r
+
+    \    \"designation\": \"DEVELOPER\"\r
+
+    \    \r
+
+    }"
+order: 1787116874510

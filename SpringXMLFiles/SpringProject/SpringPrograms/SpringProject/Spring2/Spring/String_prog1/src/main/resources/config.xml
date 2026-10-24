@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="mob" class="com.springwork.Mobile">
+    <property name="mobile_id" value="0121"/>
+    <property name="brand" value="Sumsung"/>
+    <property name="price" value="21500"/>
+</bean>
+
+    <bean id="mob1" class="com.springwork.Mobile">
+        <property name="mobile_id" value="212"/>
+        <property name="brand" value="Vivo"/>
+        <property name="price" value="32000"/>
+    </bean>
+
+    <bean id="mob2" class="com.springwork.Mobile">
+        <property name="mobile_id" value="0166"/>
+        <property name="brand" value="Iphone"/>
+        <property name="price" value="140000"/>
+    </bean>
+
+    <bean id="mob3" class="com.springwork.Mobile">
+        <property name="mobile_id" value="319"/>
+        <property name="brand" value="Oneplus"/>
+        <property name="price" value="65000"/>
+    </bean>
+
+    <bean id="mob4" class="com.springwork.Mobile">
+        <property name="mobile_id" value="541"/>
+        <property name="brand" value="Realme"/>
+        <property name="price" value="13800"/>
+    </bean>
+
+
+</beans>

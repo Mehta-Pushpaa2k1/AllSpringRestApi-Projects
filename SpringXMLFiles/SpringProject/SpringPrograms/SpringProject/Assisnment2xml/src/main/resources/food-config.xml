@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 1. Customer Bean -->
+    <bean id="customer" class="com.jsp.assignment5.Customer">
+        <property name="name" value="Pushpa Mehta"/>
+        <property name="phone" value="9355668666"/>
+    </bean>
+
+    <!-- 2. Restaurant Bean -->
+    <bean id="restaurant" class="com.jsp.assignment5.Restaurant">
+        <property name="restName" value="Spicy Treat"/>
+        <property name="location" value="Delhi"/>
+    </bean>
+
+    <!-- 3. FoodItem Bean -->
+    <bean id="foodItem" class="com.jsp.assignment5.FoodItem">
+        <property name="itemName" value="Paneer Tikka"/>
+        <property name="price" value="250.0"/>
+    </bean>
+
+    <!-- 4. Order Bean (Injecting Customer, Restaurant, and FoodItem using 'ref') -->
+    <bean id="order" class="com.jsp.assignment5.Order">
+        <property name="orderId" value="501"/>
+        <property name="customer" ref="customer"/>
+        <property name="restaurant" ref="restaurant"/>
+        <property name="foodItem" ref="foodItem"/>
+        <property name="quantity" value="3"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    // Car 1
+    <bean id="car1" class="Model.Car">
+        <property name="carNo" value="DL101"/>
+        <property name="brand" value="BMW"/>
+        <property name="color" value="Black"/>
+        <property name="price" value="6500000"/>
+    </bean>
+
+// Car 2
+    <bean id="car2" class="Model.Car">
+        <property name="carNo" value="DL102"/>
+        <property name="brand" value="Audi"/>
+        <property name="color" value="White"/>
+        <property name="price" value="5500000"/>
+    </bean>
+
+    // Car 3
+    <bean id="car3" class="Model.Car">
+        <property name="carNo" value="DL103"/>
+        <property name="brand" value="Mercedes"/>
+        <property name="color" value="Blue"/>
+        <property name="price" value="7200000"/>
+    </bean>
+
+  // Car 4
+    <bean id="car4" class="Model.Car">
+        <property name="carNo" value="DL104"/>
+        <property name="brand" value="Hyundai"/>
+        <property name="color" value="Red"/>
+        <property name="price" value="1800000"/>
+    </bean>
+
+    // Car 5
+    <bean id="car5" class="Model.Car">
+        <property name="carNo" value="DL105"/>
+        <property name="brand" value="Toyota"/>
+        <property name="color" value="Silver"/>
+        <property name="price" value="2200000"/>
+    </bean>
+
+</beans>

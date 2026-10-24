@@ -1,0 +1,20 @@
+$kind: http-request
+name: New Request
+url: http://localhost:8081/api/auth/register
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\":\"poonam\",\r
+
+    \    \"email\":\"poonammehta@gmail.com\",\r
+
+    \    \"phone\":\"98765335\",\r
+
+    \    \"password\":\"123566\",\r
+
+    \    \"roles\":\"STUDENT\"\r
+
+    }"
+order: 794774297619285

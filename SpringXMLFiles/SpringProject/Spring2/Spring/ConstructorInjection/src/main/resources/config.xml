@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <bean id="product" class="com.springInjection.Product">
+        <constructor-arg value="001"/>
+        <constructor-arg value="Laptop"/>
+        <constructor-arg value="65000"/>
+        <constructor-arg value="Electronic"/>
+        <constructor-arg ref="stu"/>
+    </bean>
+    <bean id="product1" class="com.springInjection.Product">
+        <constructor-arg value="018"/>
+        <constructor-arg value="Bed"/>
+        <constructor-arg value="28500"/>
+        <constructor-arg value="Furniture"/>
+        <constructor-arg ref="stu"/>
+    </bean>
+
+
+<bean id="stu" class="com.springInjection.Student">
+    <constructor-arg value="08"/>
+    <constructor-arg value="Mohsim"/>
+    <constructor-arg value="22"/>
+
+</bean>
+</beans>
